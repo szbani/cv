@@ -6,6 +6,36 @@
   /*text-align: center;*/
 }
 
+.intro-image{
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+}
+.intro-image::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: inherit;
+    background:
+            linear-gradient(2deg, rgba(27, 27, 28, 1) 10%, rgba(27, 27, 28, 0.70) 50%, rgba(27, 27, 28, 0.12) 85%),
+            rgba(113, 118, 100, 0.3);
+}
+.intro-image *{
+    position: relative;
+    z-index: 1;
+}
+
+/*.intro-image-shadow{*/
+/*    width: 100%;*/
+/*    height: 500px;*/
+/*    object-fit: cover;*/
+/*    background-color: rgba(113, 118, 100, 0.3);*/
+/*    filter: drop-shadow(0 0 2em #646cffaa);*/
+
+/*}*/
+/*.intro*/
+
+
 /*.logo {*/
 /*  height: 6em;*/
 /*  padding: 1.5em;*/

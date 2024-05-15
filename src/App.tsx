@@ -2,23 +2,25 @@ import './App.css'
 import Education from './components/Education'
 import Projects from "./components/Projects.tsx";
 import Introduction from "./components/Introduction.tsx";
-import {createTheme, ThemeProvider} from "@mui/material";
+import {createTheme, GlobalStyles, ThemeProvider} from "@mui/material";
 import NavBar from "./components/NavBar.tsx";
 
 function App() {
+
+
 
     const theme = createTheme({
         palette: {
             primary: {
                 main: '#2A2B2E',
-                contrastText: '#A4C2A8'
+                // contrastText: '#A4C2A8'
             },
             secondary: {
                 main: '#5A5A66',
                 contrastText: '#ACEB98'
             },
             background: {
-                default: '#2A2B2E'
+                default: '#1b1b1c'
             },
             text: {
                 primary: '#ede9e9',
@@ -30,29 +32,29 @@ function App() {
             h4: {
                 fontSize: '2.5rem',
                 fontWeight: 500,
-                color: '#A4C2A8'
+                // color: '#A4C2A8'
             },
             h6: {
                 fontSize: '1.5rem',
                 fontWeight: 400,
-                color: '#A4C2A8'
+                // color: '#A4C2A8'
             },
             subtitle1: {
                 fontSize: '1.2rem',
                 fontWeight: 300,
-                color: '#A4C2A8'
+                // color: '#A4C2A8'
             },
             subtitle2: {
                 fontSize: '1rem',
                 fontWeight: 300,
-                color: '#A4C2A8'
+                // color: '#A4C2A8'
             }
         },
         components: {
             MuiButton: {
                 styleOverrides: {
                     root: {
-                        color: '#A4C2A8'
+                        // color: '#A4C2A8'
                     }
                 }
             },
@@ -60,14 +62,14 @@ function App() {
                 styleOverrides: {
                     root: {
                         backgroundColor: '#5A5A66',
-                        color: '#A4C2A8'
+                        // color: '#A4C2A8'
                     }
                 }
             },
             MuiLink: {
                 styleOverrides: {
                     root: {
-                        color: '#A4C2A8'
+                        // color: '#A4C2A8'
                     }
                 }
             }
@@ -83,14 +85,21 @@ function App() {
             }
         },
 
-
-
     });
 
     return (
         <ThemeProvider theme={theme}>
+            <GlobalStyles styles={(theme)=>({
+                body: {
+                    backgroundColor: theme.palette.background.default,
+                    color: theme.palette.text.primary
+                },
+                a: {
+                    color: theme.palette.text.primary + ' !important'
+                }
+            })}></GlobalStyles>
             <NavBar></NavBar>
-            {/*<Introduction></Introduction>*/}
+            <Introduction></Introduction>
             {/*<Projects/>*/}
             <Education/>
         </ThemeProvider>

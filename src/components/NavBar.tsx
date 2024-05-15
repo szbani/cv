@@ -15,7 +15,7 @@ import {useState} from "react";
 
 function NavBar() {
 
-    const navItems = ['Home', 'Projects', 'Education', 'Contact'];
+    const navItems = ['About', 'Projects', 'Education', 'Contact'];
 
     const [mobileOpen, setMobileOpen] = useState(false);
 
@@ -26,7 +26,7 @@ function NavBar() {
     const drawer = (
         <Box onClick={handleDrawerToggle} sx={{textAlign: 'center'}}>
             <Typography variant="h6" sx={{my: 2}}>
-                MUI
+                Dani
             </Typography>
             <Divider/>
             <List>
@@ -46,7 +46,6 @@ function NavBar() {
             <AppBar position="sticky">
                 <Toolbar>
                     <IconButton
-                        color="inherit"
                         aria-label="open drawer"
                         edge="start"
                         onClick={handleDrawerToggle}
@@ -54,12 +53,14 @@ function NavBar() {
                     >
                         <MenuItem/>
                     </IconButton>
-                    <Typography variant={"h6"} component={"div"}
-                                sx={{flexGrow: 1, display: {xs: 'none', sm: 'block'}}}>asd</Typography>
-                    <Box sx={{display: {xs: "none", sm: 'block'}}}>
+                    <Typography variant={"h5"} component={"div"}
+                                sx={{flexGrow: 1, display: {xs: 'none', sm: 'block'}}}>
+                        Dani
+                    </Typography>
+                    <Box sx={{display: {xs: "none", sm: 'block'}, mr: {md: "4rem"}}}>
                         {navItems.map((item) => {
                             return (
-                                <Button key={item} component={Link}>
+                                <Button key={item} sx={{marginRight: {md: '1rem'}}} component={Link}>
                                     {item}
                                 </Button>
                             );
