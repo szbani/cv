@@ -10,7 +10,7 @@ interface Props {
 
 const ProjectCard: React.FC<Props> = ({title,year,description}) => {
     return (
-        <Card variant={'outlined'}  sx={{backgroundColor:'secondary.main', m: 2,width: 300}}>
+        <Card variant={'outlined'}  sx={{ m: 2,width: 300}}>
             <CardMedia
                 sx={{height:140}}
                 image="https://source.unsplash.com/random"

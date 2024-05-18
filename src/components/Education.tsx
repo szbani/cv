@@ -12,7 +12,7 @@ import {Box, Container, Link, Typography} from "@mui/material";
 
 const Education = () => {
     return (
-        <Container maxWidth={"lg"} sx={{alignContent:"center"}}>
+        <Container className="education-section" maxWidth={"lg"} sx={{alignContent:"center"}}>
             <Box component={'section'} textAlign={"center"} flexWrap={"wrap"} display={"flex"} justifyContent={"right"}>
                 <Typography alignContent={"center"} variant={'h4'}>My Education</Typography>
                 <Timeline sx={{width: "fit-content"}} position={'left'}>

@@ -4,6 +4,8 @@ import Projects from "./components/Projects.tsx";
 import Introduction from "./components/Introduction.tsx";
 import {createTheme, GlobalStyles, ThemeProvider} from "@mui/material";
 import NavBar from "./components/NavBar.tsx";
+import Connect from "./components/Connect.tsx";
+import About from "./components/About.tsx";
 
 function App() {
 
@@ -12,20 +14,19 @@ function App() {
     const theme = createTheme({
         palette: {
             primary: {
-                main: '#2A2B2E',
+                main: '#8E94F2',
                 // contrastText: '#A4C2A8'
             },
             secondary: {
-                main: '#5A5A66',
-                contrastText: '#ACEB98'
+                main: '#9FA0FF',
             },
             background: {
                 default: '#1b1b1c'
             },
             text: {
-                primary: '#ede9e9',
-                secondary: '#A4C2A8'
-            }
+                primary: '#e9e6ef',
+                secondary: '#b2fac3',
+            },
         },
         typography: {
             fontFamily: 'Montserrat',
@@ -61,7 +62,7 @@ function App() {
             MuiCard: {
                 styleOverrides: {
                     root: {
-                        backgroundColor: '#5A5A66',
+                        // backgroundColor: '#5A5A66',
                         // color: '#A4C2A8'
                     }
                 }
@@ -72,7 +73,15 @@ function App() {
                         // color: '#A4C2A8'
                     }
                 }
-            }
+            },
+            MuiAppBar:{
+                styleOverrides:{
+                    root:{
+                        backgroundColor: '#1b1b1c',
+                        color: '#e9e6ef'
+                    }
+                }
+            },
         },
         spacing: 8,
         breakpoints: {
@@ -95,13 +104,15 @@ function App() {
                     color: theme.palette.text.primary
                 },
                 a: {
-                    color: theme.palette.text.primary + ' !important'
+                    // color: theme.palette.text.primary + ' !important'
                 }
             })}></GlobalStyles>
             <NavBar></NavBar>
             <Introduction></Introduction>
-            {/*<Projects/>*/}
+            <About></About>
+            <Projects/>
             <Education/>
+            {/*<Connect></Connect>*/}
         </ThemeProvider>
     )
 }
