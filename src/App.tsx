@@ -4,7 +4,7 @@ import Projects from "./components/Projects.tsx";
 import Introduction from "./components/Introduction.tsx";
 import {createTheme, GlobalStyles, ThemeProvider} from "@mui/material";
 import NavBar from "./components/NavBar.tsx";
-import Connect from "./components/Connect.tsx";
+// import Connect from "./components/Connect.tsx";
 import About from "./components/About.tsx";
 
 function App() {
@@ -25,7 +25,7 @@ function App() {
             },
             text: {
                 primary: '#e9e6ef',
-                secondary: '#b2fac3',
+                secondary: '#9FA0FF',
             },
         },
         typography: {
@@ -49,7 +49,7 @@ function App() {
                 fontSize: '1rem',
                 fontWeight: 300,
                 // color: '#A4C2A8'
-            }
+            },
         },
         components: {
             MuiButton: {
@@ -62,16 +62,20 @@ function App() {
             MuiCard: {
                 styleOverrides: {
                     root: {
-                        // backgroundColor: '#5A5A66',
+                        backgroundColor: '#5A5A66',
                         // color: '#A4C2A8'
                     }
                 }
             },
-            MuiLink: {
+            MuiTab: {
                 styleOverrides: {
                     root: {
-                        // color: '#A4C2A8'
-                    }
+                        // color: '#A4C2A8']
+                    },
+                    selected: {
+                        fontSize: '1.5rem',
+                        color: '#A4C2A8'
+                    },
                 }
             },
             MuiAppBar:{

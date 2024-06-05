@@ -1,7 +1,9 @@
-import {Box, Container, Tab, Tabs, Typography} from "@mui/material";
+import {Box, Container, Tab, Tabs} from "@mui/material";
 // import ProjectCard from "./ProjectCard.tsx";
 import {SyntheticEvent, useState} from "react";
 import ProjectCard from "./ProjectCard.tsx";
+
+// import ProjectCard from "./ProjectCard.tsx";
 
 interface TabPanelProps {
     children?: React.ReactNode;
@@ -35,7 +37,7 @@ const Projects = () => {
 
     const [value, setValue] = useState(0);
 
-    const handleChange = (event: SyntheticEvent, newValue: number) => {
+    const handleChange = (_event: SyntheticEvent, newValue: number) => {
         setValue(newValue);
     }
 
@@ -48,7 +50,7 @@ const Projects = () => {
 
     return (
         <Container className={'project-section'}>
-            <Box component={'section'} display={"flex"} height={368}>
+            <Box component={'section'} display={"flex"} height='inherit'>
                 <Tabs
                     orientation="vertical"
                     variant="scrollable"
@@ -70,14 +72,104 @@ const Projects = () => {
                     <Tab label={'Uni Project: Szoftech'} {...a11yProps(6)} />
                     <Tab label={'School Project: szskonyveles'} {...a11yProps(7)} />
                 </Tabs>
-                <TabPanel value={value} index={0}><ProjectCard /></TabPanel>
-                <TabPanel value={value} index={1}>asd2</TabPanel>
-                <TabPanel value={value} index={2}>asd3</TabPanel>
-                <TabPanel value={value} index={3}>asd3</TabPanel>
-                <TabPanel value={value} index={4}>asd3</TabPanel>
-                <TabPanel value={value} index={5}>asd3</TabPanel>
-                <TabPanel value={value} index={6}>asd3</TabPanel>
-                <TabPanel value={value} index={7}>asd3</TabPanel>
+                <TabPanel value={value} index={0}>
+                    <ProjectCard
+                        title={'CV'}
+                        year={2024}
+                        description={"An interactive and comprehensive display of my professional" +
+                            " experience, skills, education, and achievements. Built with react" +
+                            " with typescript."}
+                        img={'https://source.unsplash.com/random'}
+                        link={'https://github.com/szbani/cv'}
+                    />
+                </TabPanel>
+                <TabPanel value={value} index={1}>
+                    <ProjectCard
+                        title={'Uni Project: Redmine'}
+                        year={2024}
+                        description={"A small clone of the popular project management tool Redmine," +
+                            " developed as a university project." +
+                            " Built with React, it features task tracking, user management," +
+                            " and project creation functionalities."}
+                        img={'https://source.unsplash.com/random'}
+                        link={'https://github.com/szbani/rendszerFejlBeadandok'}
+                    />
+                </TabPanel>
+                <TabPanel value={value} index={2}>
+                    <ProjectCard
+                        title={'Truth Or Dare'}
+                        year={2023}
+                        description={"A fun and interactive mobile application for playing" +
+                            " the classic party game Truth or Dare." +
+                            " Developed in Java and connected to a MongoDB database" +
+                            " for storing questions and dares, ensuring a dynamic and" +
+                            " varied gameplay experience."}
+                        img={'https://source.unsplash.com/random'}
+                        link={'https://github.com/szbani/truth_or_dare'}
+                    />
+                </TabPanel>
+                <TabPanel value={value} index={3}>
+                    <ProjectCard
+                        title={'Uni Project: Szoftech2'}
+                        year={2023}
+                        description={"A small clone of a bicycle rental system," +
+                            " developed as a university project." +
+                            " Built using C# with a command-line interface," +
+                            " it manages bicycle rentals and returns," +
+                            " tracking user information and rental durations."}
+                        img={'https://source.unsplash.com/random'}
+                        link={'https://github.com/szbani/Szoftech2'}
+                    />
+                </TabPanel>
+                <TabPanel value={value} index={4}>
+                    <ProjectCard
+                        title={'ScooterCity'}
+                        year={2023}
+                        description={"A specialized webshop for scooters featuring" +
+                            " an admin page for managing inventory." +
+                            " Built using PHP and connected to a MySQL database for" +
+                            " robust data management."}
+                        img={'https://source.unsplash.com/random'}
+                        link={'https://github.com/szbani/scootercity'}
+                    />
+                </TabPanel>
+                <TabPanel value={value} index={5}>
+                    <ProjectCard
+                        title={'Uni Project: TrainSystem'}
+                        year={2023}
+                        description={"A small clone of a train ticket reservation" +
+                            " system, developed as a university project." +
+                            " Built with C# using its default GUI, and connected" +
+                            " to a local SQL database for managing reservations" +
+                            " and user data."}
+                        img={'https://source.unsplash.com/random'}
+                        link={'https://github.com/szbani/TrainSystem'}
+                    />
+                </TabPanel>
+                <TabPanel value={value} index={6}>
+                    <ProjectCard
+                        title={'Uni Project: Szoftech'}
+                        year={2023}
+                        description={"A small clone of a hall rental system," +
+                            " developed as a university project. Built using Java" +
+                            " with a command-line interface, it handles the booking" +
+                            " and management of hall rentals efficiently."}
+                        img={'https://source.unsplash.com/random'}
+                        link={'https://github.com/szbani/szoftech'}
+                    />
+                </TabPanel>
+                <TabPanel value={value} index={7}>
+                    <ProjectCard
+                        title={'School Project: szskonyveles'}
+                        year={2023}
+                        description={"A small webpage for an accountant, developed as" +
+                            " a school project. Built using PHP, it serves as an" +
+                            " advertisement platform showcasing services and" +
+                            " contact information."}
+                        img={'https://source.unsplash.com/random'}
+                        link={'https://github.com/szbani/szskonyveles'}
+                    />
+                </TabPanel>
             </Box>
         </Container>
     )

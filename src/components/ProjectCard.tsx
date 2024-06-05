@@ -1,34 +1,38 @@
 import React from "react";
-import {Button, Card, CardActions, CardContent, CardHeader, CardMedia, Typography} from "@mui/material";
+import {Box, Button, Card, CardActions, CardContent, CardHeader, CardMedia, Typography} from "@mui/material";
 
 interface Props {
     title: string;
     year: number;
     description: string;
+    img: string;
+    link: string;
 }
 
 
-const ProjectCard: React.FC<Props> = ({title,year,description}) => {
+const ProjectCard: React.FC<Props> = ({title,year,description,link}) => {
     return (
-        <Card variant={'outlined'}  sx={{ m: 2,width: 300}}>
+        <Card variant={'outlined'} sx={{ m: 2,height:'inherit',display:'flex'}}>
             <CardMedia
-                sx={{height:140}}
+                sx={{width: '40.0rem', }}
                 image="https://source.unsplash.com/random"
                 title={title}
             />
-            <CardHeader
-                title={title}
-                subheader={year}
-            />
-            <CardContent>
-                <Typography>
-                    {description}
-                </Typography>
-            </CardContent>
+            <Box>
+                <CardHeader
+                    title={title}
+                    subheader={year}
+                />
+                <CardContent>
+                    <Typography>
+                        {description}
+                    </Typography>
+                </CardContent>
 
-            <CardActions>
-                <Button size={"small"} title={'Megnéz'}>Megnéz</Button>
-            </CardActions>
+                <CardActions>
+                    <Button size={"small"} title={'Megnéz'} href={link}>View</Button>
+                </CardActions>
+            </Box>
         </Card>
     )
 }

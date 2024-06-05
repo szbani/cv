@@ -6,7 +6,7 @@ function About() {
         <Container component={'section'} className={'about-section'}>
             <Box display={"flex"}>
                 <CardMedia image={"https://source.unsplash.com/random"} sx={{width:'50rem', height:'320px'}}></CardMedia>
-                <Box>
+                <Box marginLeft={'1rem'}>
                     <Typography variant={'h5'} sx={{textDecoration:'underline'}}>About Me</Typography>
                     <Typography variant={'h4'}>Hello, I'm Dani</Typography>
                     <Typography variant={'h6'}>I'm a Junior Software Engineer</Typography>

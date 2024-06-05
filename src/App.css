@@ -65,6 +65,10 @@
     z-index: 1;
 }
 
+.Mui-selected{
+    color: #f2f8f8 !important;
+}
+
 .tab-panel{
     width: 100%;
 }
