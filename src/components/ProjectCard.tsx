@@ -12,7 +12,7 @@ interface Props {
 
 const ProjectCard: React.FC<Props> = ({title,year,description,link}) => {
     return (
-        <Card variant={'outlined'} sx={{ m: 2,height:'inherit',display:'flex'}}>
+        <Card variant={'outlined'} sx={{ m: 2,display:'flex', flexWrap:{xs: 'wrap', md:'nowrap'}}}>
             <CardMedia
                 sx={{width: '40.0rem', }}
                 image="https://source.unsplash.com/random"

@@ -4,7 +4,7 @@ import {Box, CardMedia, Container, Typography} from "@mui/material";
 function About() {
   return (
         <Container component={'section'} className={'about-section'}>
-            <Box display={"flex"}>
+            <Box display={"flex"} flexWrap={{xs: 'wrap', md:'nowrap'}}>
                 <CardMedia image={"https://source.unsplash.com/random"} sx={{width:'50rem', height:'320px'}}></CardMedia>
                 <Box marginLeft={'1rem'}>
                     <Typography variant={'h5'} sx={{textDecoration:'underline'}}>About Me</Typography>

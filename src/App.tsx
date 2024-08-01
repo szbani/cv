@@ -10,7 +10,6 @@ import About from "./components/About.tsx";
 function App() {
 
 
-
     const theme = createTheme({
         palette: {
             primary: {
@@ -70,17 +69,15 @@ function App() {
             MuiTab: {
                 styleOverrides: {
                     root: {
-                        // color: '#A4C2A8']
-                    },
-                    selected: {
-                        fontSize: '1.5rem',
-                        color: '#A4C2A8'
+                        "&.Mui-selected": {
+                            color: '#f2f8f8'
+                        },
                     },
                 }
             },
-            MuiAppBar:{
-                styleOverrides:{
-                    root:{
+            MuiAppBar: {
+                styleOverrides: {
+                    root: {
                         backgroundColor: '#1b1b1c',
                         color: '#e9e6ef'
                     }
@@ -102,7 +99,7 @@ function App() {
 
     return (
         <ThemeProvider theme={theme}>
-            <GlobalStyles styles={(theme)=>({
+            <GlobalStyles styles={(theme) => ({
                 body: {
                     backgroundColor: theme.palette.background.default,
                     color: theme.palette.text.primary
